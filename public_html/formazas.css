@@ -1,0 +1,31 @@
+@charset "utf-8";
+body{
+    background: gray;
+}
+main{
+    max-width: 1200px;
+    background: white;
+    margin: auto;
+}
+main,header,section,article,footer,div{
+    border: 1px solid gray;
+}
+article img{width: 100%;}
+
+article{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-grap:10px;
+}
+article div{
+    padding:10px;
+    border: 1px solid gray;
+    border-radius:  10px;
+}
+#nagykepdiv>img{
+    width: 100%;
+}
+section{
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+}
