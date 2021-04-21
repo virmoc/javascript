@@ -32,21 +32,18 @@ function init(){
 
     console.log(kepTomb);
     for (var i = 0; i < $("article img").length; i++) {
-        $("article img")[i].src=kepTomb[i].eleresiut;
-        $("article img")[i].src=kepTomb[i]["eleresiut"];
-        $("article h3")[i].innerHTML=kepTomb[i].cim;
-        $("article p")[i].innerHTML=kepTomb[i].leiras;
+        $("article img").eq(i).html(kepTomb[i].eleresiut);
+        $("article img").eq(i).html(kepTomb[i]["eleresiut"]);
+        $("article h3").eq(i).text(kepTomb[i].cim);
+        $("article p").eq(i).text(kepTomb[i].leiras);
     }
     for (var i = 0; i < kepTomb.length; i++) {
 //        console.log(kepTomb[i].eleresiut);
-        $("article div img")[i].addEventListener("click",betolt);
+        $("article div img").click(betolt);
         
     }
     
-    
-    
-    
-    
+ 
 function betolt(){
     var index =this.id;
     console.log(kepTomb[index].eleresiut);
@@ -54,11 +51,10 @@ function betolt(){
     console.log(kepTomb[index].leiras);
     console.log(index);
     
-    $("section div img")[0].src= kepTomb[index].eleresiut;
-    $("section div h3")[0].innerHTML= kepTomb[index].cim;
-    $("section div h3")[0].innerHTML= kepTomb[index].leiras;
-}
-}
+    $("section div img").eq(0).attr("src", kepTomb[index].eleresiut);
+    $("section div h3").eq(0).text(kepTomb[index].cim);
+    $("section div h3").eq(0).text(kepTomb[index].leiras);
+}  
 //        $("article img")[i].innerHTML=cim[i];
         
 //    $("article img")[0].src="kepek/kep1.jpg";
